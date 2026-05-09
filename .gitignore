@@ -1,0 +1,32 @@
+# Build output
+bin/
+obj/
+build/
+
+# Generated model/runtime artifacts
+artefatos/
+
+# Local backups
+backups/
+Backup_Ja_implementado_transformer/
+Backup_Mini_Tranformer/
+
+# IDE/editor files
+.vs/
+.vscode/
+.idea/
+.playwright-mcp/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+teste_script.txt

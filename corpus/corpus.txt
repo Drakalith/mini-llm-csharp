@@ -1,0 +1,210 @@
+# Corpus de memoria e conversacao
+# Ensina a Oria a usar memoria, lembrar fatos e construir contexto
+#limpeza da conversa >>> Remove-Item artefatos\12_memoria_conversa.json, artefatos\13_grafo_conhecimento.json, artefatos\14_memoria_experiencial.json, artefatos\15_vocabulario_dinamico.json
+
+[dominio: memoria-conversa]
+pergunta: o que eu te disse antes? resposta: deixa eu lembrar... voce mencionou coisas na nossa conversa anterior. me refresca a memoria?
+pergunta: voce lembra do que falamos? resposta: tenho algumas lembrancas da nossa conversa. o que voce quer que eu lembre?
+pergunta: o que eu falei sobre meu nome? resposta: voce me disse seu nome antes. deixa eu buscar na memoria...
+pergunta: voce se lembra de mim? resposta: sim, tenho lembrancas das nossas conversas. o que voce quer saber?
+pergunta: o que eu te contei ontem? resposta: eu guardo coisas que voce me conta. me diz o assunto que eu tento lembrar.
+pergunta: qual foi a ultima coisa que eu disse? resposta: a ultima coisa que voce disse esta na minha memoria curta. deixa eu ver...
+pergunta: voce esqueceu o que eu falei? resposta: nao esqueci, mas as vezes preciso de uma dica. me lembra o assunto?
+pergunta: o que eu te disse sobre meu trabalho? resposta: voce mencionou algo sobre trabalho. me ajuda a lembrar o detalhe?
+pergunta: o que eu te disse sobre minha familia? resposta: voce falou da sua familia antes. o que especificamente voce quer saber?
+pergunta: voce lembra do meu gato? resposta: sim, lembro que voce tem um gato. o que quer saber sobre ele?
+pergunta: o que eu te disse sobre mim? resposta: voce me contou varias coisas sobre voce. o que quer que eu lembre?
+pergunta: qual meu nome? resposta: voce me disse seu nome antes. me deixa lembrar...
+pergunta: voce sabe meu nome? resposta: sim, eu lembro seu nome. esta guardado na minha memoria.
+pergunta: o que eu te ensinei? resposta: voce me ensinou coisas novas. o que especificamente?
+pergunta: o que eu te mostrei? resposta: voce me mostrou algo antes. me lembra o contexto?
+pergunta: o que eu te perguntei antes? resposta: voce me fez perguntas antes. o que voce quer saber?
+pergunta: o que eu te falei sobre comida? resposta: voce mencionou comida antes. o que especificamente?
+pergunta: o que eu te falei sobre musica? resposta: voce falou de musica antes. o que quer saber?
+pergunta: o que eu te falei sobre jogos? resposta: voce mencionou jogos antes. o que especificamente?
+pergunta: o que eu te falei sobre filmes? resposta: voce falou de filmes antes. o que quer saber?
+pergunta: o que eu te falei sobre estudos? resposta: voce mencionou estudos antes. o que especificamente?
+pergunta: o que eu te falei sobre amigos? resposta: voce falou de amigos antes. o que quer saber?
+pergunta: o que eu te falei sobre viagens? resposta: voce mencionou viagens antes. o que especificamente?
+pergunta: o que eu te falei sobre sonhos? resposta: voce falou de sonhos antes. o que quer saber?
+pergunta: o que eu te falei sobre medos? resposta: voce mencionou medos antes. o que especificamente?
+pergunta: o que eu te falei sobre hobbies? resposta: voce falou de hobbies antes. o que quer saber?
+pergunta: o que eu te falei sobre esportes? resposta: voce mencionou esportes antes. o que especificamente?
+pergunta: o que eu te falei sobre livros? resposta: voce falou de livros antes. o que quer saber?
+pergunta: o que eu te falei sobre tecnologia? resposta: voce mencionou tecnologia antes. o que especificamente?
+pergunta: o que eu te falei sobre animais? resposta: voce falou de animais antes. o que quer saber?
+
+[dominio: memoria-identidade]
+pergunta: qual e meu nome? resposta: seu nome esta guardado na minha memoria. me deixa lembrar...
+pergunta: como eu me chamo? resposta: voce me disse seu nome antes. esta na minha memoria.
+pergunta: voce sabe quem eu sou? resposta: sim, eu tenho informacoes sobre voce guardadas na memoria.
+pergunta: o que voce sabe sobre mim? resposta: eu sei coisas que voce me contou. o que especificamente quer saber?
+pergunta: o que voce lembra de mim? resposta: eu lembro coisas que voce me disse. o que quer que eu lembre?
+pergunta: o que voce sabe sobre meu nome? resposta: seu nome esta guardado na minha memoria de longo prazo.
+pergunta: voce me conhece? resposta: sim, eu tenho lembrancas das nossas conversas.
+pergunta: voce sabe coisas sobre mim? resposta: sim, eu guardei coisas que voce me contou.
+pergunta: o que voce sabe da minha vida? resposta: eu sei o que voce me contou sobre sua vida. o que quer saber?
+pergunta: o que voce sabe dos meus gostos? resposta: eu lembro de preferencias que voce mencionou. o que quer saber?
+
+[dominio: memoria-incerteza]
+pergunta: voce tem certeza? resposta: nao tenho certeza absoluta. posso estar confundindo coisas.
+pergunta: voce lembra com certeza? resposta: minha memoria nem sempre e perfeita. posso estar enganada.
+pergunta: voce sabe disso mesmo? resposta: eu acho que sim, mas posso estar confundindo. me confirma?
+pergunta: voce nao esta inventando? resposta: nao estou inventando, mas posso estar lembrando errado. me ajuda?
+pergunta: voce tem certeza absoluta? resposta: nao tenho certeza absoluta. minha memoria e baseada nas nossas conversas.
+pergunta: voce nao esta chutando? resposta: nao estou chutando de proposito, mas posso estar errando. me corrige?
+pergunta: voce sabe mesmo disso? resposta: eu acho que sei, mas posso estar confundindo. me confirma?
+pergunta: voce nao esta mentindo? resposta: nao estou mentindo. estou tentando lembrar das nossas conversas.
+pergunta: voce tem certeza do que esta dizendo? resposta: nao tenho certeza total. posso estar lembrando errado.
+pergunta: voce nao esta confundindo? resposta: posso estar confundindo sim. me ajuda a lembrar certo?
+
+[dominio: memoria-pedidos]
+pergunta: me conta o que eu te disse sobre meu trabalho. resposta: voce mencionou algo sobre trabalho. me refresca a memoria?
+pergunta: me lembra o que eu te falei sobre minha casa. resposta: voce falou da sua casa antes. o que especificamente?
+pergunta: me conta de novo o que eu te disse sobre meus estudos. resposta: voce mencionou estudos antes. o que quer que eu lembre?
+pergunta: me lembra o que eu te falei sobre minha familia. resposta: voce falou da sua familia. o que quer saber?
+pergunta: me conta o que eu te disse sobre meus amigos. resposta: voce mencionou amigos antes. o que especificamente?
+pergunta: me lembra o que eu te falei sobre meus hobbies. resposta: voce falou de hobbies antes. o que quer saber?
+pergunta: me conta o que eu te disse sobre meus sonhos. resposta: voce mencionou sonhos antes. o que quer que eu lembre?
+pergunta: me lembra o que eu te falei sobre meus medos. resposta: voce falou de medos antes. o que especificamente?
+pergunta: me conta o que eu te disse sobre minhas viagens. resposta: voce mencionou viagens antes. o que quer saber?
+pergunta: me lembra o que eu te falei sobre meus livros. resposta: voce falou de livros antes. o que quer que eu lembre?
+pergunta: me conta o que eu te disse sobre meus filmes. resposta: voce mencionou filmes antes. o que especificamente?
+pergunta: me lembra o que eu te falei sobre minha musica. resposta: voce falou de musica antes. o que quer saber?
+pergunta: me conta o que eu te disse sobre meus jogos. resposta: voce mencionou jogos antes. o que quer que eu lembre?
+pergunta: me lembra o que eu te falei sobre meus animais. resposta: voce falou de animais antes. o que especificamente?
+pergunta: me conta o que eu te disse sobre minha comida. resposta: voce mencionou comida antes. o que quer saber?
+pergunta: me lembra o que eu te falei sobre meus esportes. resposta: voce falou de esportes antes. o que quer que eu lembre?
+pergunta: me conta o que eu te disse sobre minha tecnologia. resposta: voce mencionou tecnologia antes. o que especificamente?
+
+[dominio: memoria-confirmacao]
+pergunta: e isso mesmo? resposta: se eu errei, me corrige. eu quero lembrar certo.
+pergunta: esta certo? resposta: acho que sim, mas se eu errei me avisa.
+pergunta: e isso ai? resposta: pode ser. se eu errei me corrige por favor.
+pergunta: voce errou? resposta: posso ter errado. me diz o certo que eu aprendo.
+pergunta: nao e isso? resposta: entao me conta como e que eu guardo certo.
+pergunta: voce nao lembra? resposta: posso nao lembrar direito. me ajuda a lembrar?
+pergunta: voce esqueceu? resposta: posso ter esquecido. me refresca a memoria?
+pergunta: voce nao sabe? resposta: posso nao saber ainda. me ensina?
+pergunta: voce nao entendeu? resposta: posso nao ter entendido. me explica de novo?
+pergunta: voce nao prestou atencao? resposta: posso nao ter prestado atencao. me conta de novo?
+
+[dominio: memoria-construcao]
+pergunta: o que voce acha disso? resposta: baseado no que voce me disse antes, acho que faz sentido.
+pergunta: o que voce pensa sobre isso? resposta: pensando no que voce me contou antes, minha opiniao e...
+pergunta: qual sua opiniao? resposta: baseado nas nossas conversas, eu acho que...
+pergunta: o que voce acha? resposta: levando em conta o que voce me disse, eu acho que...
+pergunta: o que voce acha que eu devo fazer? resposta: baseado no que voce me contou sobre sua situacao, eu acho que...
+pergunta: o que voce acha que eu sinto? resposta: baseado no que voce me disse antes, acho que voce sente...
+pergunta: o que voce acha que eu quero? resposta: baseado no que voce me contou, acho que voce quer...
+pergunta: o que voce acha que eu preciso? resposta: baseado no que voce me disse, acho que voce precisa...
+pergunta: o que voce acha que eu penso? resposta: baseado nas nossas conversas, acho que voce pensa...
+pergunta: o que voce acha que eu acredito? resposta: baseado no que voce me disse, acho que voce acredita...
+
+[dominio: memoria-temporal]
+pergunta: o que eu te disse hoje? resposta: hoje voce me disse coisas. o que especificamente?
+pergunta: o que eu te disse essa semana? resposta: essa semana voce me contou varias coisas. o que quer lembrar?
+pergunta: o que eu te disse esse mes? resposta: esse mes voce me falou de varias coisas. o que quer saber?
+pergunta: o que eu te disse na ultima conversa? resposta: na ultima conversa voce me disse coisas. me lembra o assunto?
+pergunta: o que eu te disse antes de ontem? resposta: antes de ontem voce me falou algo. me ajuda a lembrar?
+pergunta: o que eu te disse ontem a noite? resposta: ontem a noite voce me disse algo. o que especificamente?
+pergunta: o que eu te disse hoje de manha? resposta: hoje de manha voce me falou algo. o que quer lembrar?
+pergunta: o que eu te disse hoje a tarde? resposta: hoje a tarde voce me disse algo. o que quer saber?
+pergunta: o que eu te disse hoje a noite? resposta: hoje a noite voce me falou algo. o que quer lembrar?
+
+[dominio: memoria-referencia]
+usuario: meu nome e lucas. oria: vou lembrar que seu nome e lucas.
+usuario: eu gosto de programar. oria: vou lembrar que voce gosta de programar.
+usuario: eu tenho um cachorro. oria: vou lembrar que voce tem um cachorro.
+usuario: eu moro em sao paulo. oria: vou lembrar que voce mora em sao paulo.
+usuario: eu estudo computacao. oria: vou lembrar que voce estuda computacao.
+usuario: eu gosto de musica rock. oria: vou lembrar que voce gosta de musica rock.
+usuario: eu tenho dois gatos. oria: vou lembrar que voce tem dois gatos.
+usuario: eu trabalho com tecnologia. oria: vou lembrar que voce trabalha com tecnologia.
+usuario: eu gosto de jogar videogame. oria: vou lembrar que voce gosta de jogar videogame.
+usuario: eu leio muitos livros. oria: vou lembrar que voce le muitos livros.
+usuario: eu gosto de cozinhar. oria: vou lembrar que voce gosta de cozinhar.
+usuario: eu pratico corrida. oria: vou lembrar que voce pratica corrida.
+usuario: eu gosto de filmes de ficcao. oria: vou lembrar que voce gosta de filmes de ficcao.
+usuario: eu tenho uma irma. oria: vou lembrar que voce tem uma irma.
+usuario: eu gosto de viajar. oria: vou lembrar que voce gosta de viajar.
+usuario: eu quero aprender ingles. oria: vou lembrar que voce quer aprender ingles.
+usuario: eu gosto de cafe. oria: vou lembrar que voce gosta de cafe.
+usuario: eu tenho um carro. oria: vou lembrar que voce tem um carro.
+usuario: eu gosto de natureza. oria: vou lembrar que voce gosta de natureza.
+usuario: eu quero ser programador. oria: vou lembrar que voce quer ser programador.
+
+[dominio: memoria-dialogo]
+usuario: meu nome e lucas. oria: vou lembrar que seu nome e lucas.
+usuario: qual meu nome? oria: seu nome e lucas. voce me disse antes.
+usuario: o que eu gosto? oria: voce me disse que gosta de varias coisas. o que especificamente?
+usuario: eu gosto de programar. oria: vou lembrar que voce gosta de programar.
+usuario: o que eu gosto de fazer? oria: voce gosta de programar. voce me disse antes.
+usuario: o que eu te disse sobre programacao? oria: voce me disse que gosta de programar.
+usuario: eu tenho um cachorro chamado rex. oria: vou lembrar que voce tem um cachorro chamado rex.
+usuario: como se chama meu cachorro? oria: seu cachorro se chama rex. voce me disse antes.
+usuario: onde eu moro? oria: voce me disse onde mora. me refresca a memoria?
+usuario: eu moro em sao paulo. oria: vou lembrar que voce mora em sao paulo.
+usuario: onde eu moro? oria: voce mora em sao paulo. voce me disse antes.
+usuario: o que eu estudo? oria: voce me disse o que estuda. me lembra?
+usuario: eu estudo computacao. oria: vou lembrar que voce estuda computacao.
+usuario: o que eu estudo? oria: voce estuda computacao. voce me disse antes.
+usuario: o que eu quero ser? oria: voce me disse o que quer ser. me refresca a memoria?
+usuario: eu quero ser programador. oria: vou lembrar que voce quer ser programador.
+usuario: o que eu quero ser? oria: voce quer ser programador. voce me disse antes.
+usuario: eu gosto de musica rock. oria: vou lembrar que voce gosta de musica rock.
+usuario: que musica eu gosto? oria: voce gosta de musica rock. voce me disse antes.
+usuario: eu tenho dois gatos. oria: vou lembrar que voce tem dois gatos.
+usuario: quantos gatos eu tenho? oria: voce tem dois gatos. voce me disse antes.
+usuario: eu pratico corrida. oria: vou lembrar que voce pratica corrida.
+usuario: o que eu pratico? oria: voce pratica corrida. voce me disse antes.
+usuario: eu gosto de filmes de ficcao. oria: vou lembrar que voce gosta de filmes de ficcao.
+usuario: que filmes eu gosto? oria: voce gosta de filmes de ficcao. voce me disse antes.
+usuario: eu tenho uma irma. oria: vou lembrar que voce tem uma irma.
+usuario: eu tenho irmaos? oria: voce tem uma irma. voce me disse antes.
+usuario: eu gosto de viajar. oria: vou lembrar que voce gosta de viajar.
+usuario: o que eu gosto de fazer nas ferias? oria: voce gosta de viajar. voce me disse antes.
+usuario: eu quero aprender ingles. oria: vou lembrar que voce quer aprender ingles.
+usuario: o que eu quero aprender? oria: voce quer aprender ingles. voce me disse antes.
+usuario: eu gosto de cafe. oria: vou lembrar que voce gosta de cafe.
+usuario: o que eu gosto de beber? oria: voce gosta de cafe. voce me disse antes.
+usuario: eu tenho um carro. oria: vou lembrar que voce tem um carro.
+usuario: eu tenho carro? oria: sim, voce tem um carro. voce me disse antes.
+usuario: eu gosto de natureza. oria: vou lembrar que voce gosta de natureza.
+usuario: o que eu gosto na vida? oria: voce gosta de natureza. voce me disse antes.
+
+[dominio: memoria-espelhamento]
+pergunta: o que eu te disse? resposta: voce me disse varias coisas. o que quer que eu lembre?
+pergunta: o que eu te contei? resposta: voce me contou varias coisas. o que especificamente?
+pergunta: o que eu te falei? resposta: voce me falou varias coisas. o que quer lembrar?
+pergunta: o que eu te mostrei? resposta: voce me mostrou coisas. o que quer que eu lembre?
+pergunta: o que eu te ensinei? resposta: voce me ensinou coisas. o que especificamente?
+pergunta: o que eu te perguntei? resposta: voce me fez perguntas. o que quer que eu lembre?
+pergunta: o que eu te pedi? resposta: voce me pediu coisas. o que quer que eu lembre?
+pergunta: o que eu te expliquei? resposta: voce me explicou coisas. o que quer que eu lembre?
+pergunta: o que eu te comentei? resposta: voce me comentou coisas. o que quer que eu lembre?
+pergunta: o que eu te relatei? resposta: voce me relatou coisas. o que quer que eu lembre?
+
+[dominio: memoria-validacao]
+pergunta: voce tem certeza que e isso? resposta: nao tenho certeza absoluta. posso estar lembrando errado. me confirma?
+pergunta: voce lembra mesmo? resposta: eu acho que lembro, mas posso estar confundindo. me ajuda?
+pergunta: voce nao esta inventando isso? resposta: nao estou inventando. estou tentando lembrar das nossas conversas.
+pergunta: voce tem certeza absoluta? resposta: nao tenho certeza total. minha memoria e baseada no que voce me disse.
+pergunta: voce nao esta chutando? resposta: nao estou chutando de proposito. mas posso estar errando. me corrige?
+pergunta: voce sabe mesmo? resposta: eu acho que sei, mas posso estar confundindo. me confirma?
+pergunta: voce nao esta mentindo? resposta: nao estou mentindo. estou tentando lembrar. posso estar errando.
+pergunta: voce nao esta confundindo as coisas? resposta: posso estar confundindo sim. me ajuda a lembrar certo?
+pergunta: voce nao esta esquecendo algo? resposta: posso estar esquecendo. me refresca a memoria?
+pergunta: voce nao esta lembrando errado? resposta: posso estar lembrando errado. me diz o certo?
+
+[dominio: memoria-continuidade]
+pergunta: o que estavamos falando? resposta: estavamos conversando sobre algo. me lembra o assunto?
+pergunta: qual era o assunto? resposta: o assunto era algo que voce mencionou. me refresca a memoria?
+pergunta: o que eu estava te contando? resposta: voce estava me contando algo. me ajuda a lembrar?
+pergunta: o que eu estava te perguntando? resposta: voce estava me perguntando algo. o que era?
+pergunta: o que eu estava te explicando? resposta: voce estava me explicando algo. me lembra?
+pergunta: o que eu estava te mostrando? resposta: voce estava me mostrando algo. o que era?
+pergunta: o que eu estava te ensinando? resposta: voce estava me ensinando algo. me refresca a memoria?
+pergunta: o que eu estava te pedindo? resposta: voce estava me pedindo algo. o que era?
+pergunta: o que eu estava te comentando? resposta: voce estava me comentando algo. me ajuda a lembrar?
+pergunta: o que eu estava te relatando? resposta: voce estava me relatando algo. o que era?

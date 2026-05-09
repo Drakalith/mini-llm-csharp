@@ -1,0 +1,9 @@
+* text=auto
+
+*.cs text
+*.csproj text
+*.sln text
+*.json text
+*.md text
+*.mmd text
+*.txt text

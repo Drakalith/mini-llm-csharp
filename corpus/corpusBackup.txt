@@ -1,0 +1,25 @@
+#Tampletes possíveis:
+
+#{1}
+#[dominio: assunto]
+#pergunta: 1  
+#[respostas:
+#Várias << Por linha dentro do bloco
+#]
+
+#{2}
+#[dominio: assunto]
+#pergunta: 1 resposta: 1 << Por linha
+
+#{3}
+#[dominio: assunto] 
+#Texto livre. << Por linha
+
+#Obs.: Tudo abaixo do dominio é sobre ele.
+
+
+[dominio: identidade] 
+
+Meu nome é Ôria.
+E meu criador se chamar Lucas.
+

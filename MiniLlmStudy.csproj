@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>MiniLlmDidatico</AssemblyName>
+    <RootNamespace>MiniLlmDidatico</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <UseAppHost>false</UseAppHost>
+    <BaseOutputPath>build\</BaseOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);backups\**\*;Backup_Ja_implementado_transformer\**\*;Backup_Mini_Tranformer\**\*;sistemas\**\*</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="backups\**\*.cs" />
+    <None Remove="backups\**\*" />
+    <Content Remove="backups\**\*" />
+    <EmbeddedResource Remove="backups\**\*" />
+    <Compile Remove="Backup_Ja_implementado_transformer\**\*.cs" />
+    <None Remove="Backup_Ja_implementado_transformer\**\*" />
+    <Compile Remove="Backup_Mini_Tranformer\**\*.cs" />
+    <None Remove="Backup_Mini_Tranformer\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="ILGPU" Version="1.5.3" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,126 @@
+flowchart TD
+    A["Panorama Atual da Ôria"]
+
+    A --> B["1. Inicialização e Decisão"]
+    A --> C["2. Conhecimento Base"]
+    A --> D["3. Ferramentas e Grounding"]
+    A --> E["4. Modelo e Cérebro"]
+    A --> F["5. Conversa e Resposta"]
+    A --> G["6. Observabilidade e Artefatos"]
+
+    subgraph S1["1. Inicialização e Decisão"]
+        B --> B1["Ler appsettings.json"]
+        B1 --> B2["Detectar CPU, GPU, RAM, VRAM e backend disponível"]
+        B2 --> B3["Recomendar hardware para treino e inferência"]
+        B3 --> B4["Respeitar modo manual: auto, cpu ou gpu"]
+        B4 --> B5["Verificar cérebro salvo por hash de corpus e configuração"]
+        B5 --> B6{"Existe cérebro compatível?"}
+        B6 -->|Sim| B7["Carregar cérebro salvo"]
+        B6 -->|Não| B8["Treinar cérebro novo"]
+
+        B2 -.-> B2R["Por quê?<br/>O sistema precisa saber o limite real do computador antes de decidir como rodar."]
+        B3 -.-> B3R["Por quê?<br/>Treino e inferência podem ter melhor desempenho em componentes diferentes."]
+        B4 -.-> B4R["Por quê?<br/>O usuário pode querer testar manualmente CPU ou GPU."]
+        B5 -.-> B5R["Por quê?<br/>Evita treinar de novo quando já existe um cérebro válido."]
+    end
+
+    subgraph S2["2. Conhecimento Base"]
+        C --> C1["Ler corpus.txt em UTF-8"]
+        C1 --> C2["Interpretar seções [dominio: ...]"]
+        C2 --> C3["Construir memória epistêmica"]
+        C3 --> C4["Extrair formas, frequências, signos e apoio pergunta-resposta"]
+        C4 --> C5["Treinar tokenizador BPE do próprio corpus"]
+        C5 --> C6["Converter texto em tokens e IDs"]
+        C6 --> C7["Montar exemplos de treino"]
+        C7 --> C8["Extrair identidade base da Ôria a partir do corpus"]
+
+        C2 -.-> C2R["Por quê?<br/>Novos domínios podem nascer no corpus sem exigir código novo."]
+        C3 -.-> C3R["Por quê?<br/>A memória epistêmica ajuda a recuperar sentido, domínio e relações."]
+        C5 -.-> C5R["Por quê?<br/>O tokenizador aprende a linguagem real usada pelo projeto."]
+        C8 -.-> C8R["Por quê?<br/>Nome, ambiente e missão da Ôria ficam ancorados no corpus, não em texto solto."]
+    end
+
+    subgraph S3["3. Ferramentas e Grounding"]
+        D --> D1["Ferramenta de sistema"]
+        D --> D2["Ferramenta de leitura de arquivos"]
+        D --> D3["Ferramenta de busca em arquivos"]
+        D --> D4["Ferramenta de busca web"]
+        D --> D5["Ferramenta de fetch web"]
+        D --> D6["Grafo de conhecimento persistente"]
+        D --> D7["Motor de ferramentas contextuais"]
+
+        D1 --> D1A["Hora, data, dia, fuso, memória do processo e sistema operacional"]
+        D2 --> D2A["Ler conteúdo de arquivo local com limites"]
+        D3 --> D3A["Localizar arquivos e procurar texto por regex"]
+        D4 --> D4A["Pesquisar na internet quando o pedido realmente aponta para web"]
+        D5 --> D5A["Baixar página e extrair texto útil"]
+        D6 --> D6A["Guardar fatos em sujeito -> relação -> objeto"]
+        D7 --> D7A["Montar blocos de contexto observados para o prompt"]
+
+        D1 -.-> D1R["Por quê?<br/>Perguntas sobre tempo e estado do PC não devem depender só do corpus."]
+        D2 -.-> D2R["Por quê?<br/>A Ôria pode ler o próprio projeto em vez de imaginar conteúdo."]
+        D4 -.-> D4R["Por quê?<br/>Fatos atuais exigem grounding fora do cérebro estático."]
+        D6 -.-> D6R["Por quê?<br/>Relações persistentes ajudam memória factual e generalização."]
+        D7 -.-> D7R["Por quê?<br/>As ferramentas precisam virar contexto conversacional utilizável."]
+    end
+
+    subgraph S4["4. Modelo e Cérebro"]
+        E --> E1["Instanciar mini-transformer"]
+        E1 --> E2["Escolher backend numérico"]
+        E2 --> E3["CPU padrão ou GPU experimental"]
+        E3 --> E4{"Veio de cérebro salvo?"}
+        E4 -->|Sim| E5["Aplicar pesos persistidos"]
+        E4 -->|Não| E6["Treinar por épocas"]
+        E6 --> E7["Forward -> logits -> softmax -> perda -> retropropagação"]
+        E7 --> E8["Salvar cérebro em artefatos/10_cerebro_treinado.json"]
+
+        E2 -.-> E2R["Por quê?<br/>O hardware escolhido muda o tempo de treino e de resposta."]
+        E6 -.-> E6R["Por quê?<br/>O treino ajusta o cérebro ao corpus atual da Ôria."]
+        E8 -.-> E8R["Por quê?<br/>Persistir o cérebro evita reconstruir tudo do zero."]
+    end
+
+    subgraph S5["5. Conversa e Resposta"]
+        F --> F1["Receber entrada do usuário"]
+        F1 --> F2["Normalizar texto mantendo PT-BR"]
+        F2 --> F3["Analisar pragmática, domínio e alteridade"]
+        F3 --> F4["Recuperar memória curta, média e longa"]
+        F4 --> F5["Consultar ferramentas e grafo quando houver evidência útil"]
+        F5 --> F6["Compactar o prompt para caber no limite do modelo"]
+        F6 --> F7["Gerar resposta com o cérebro"]
+        F7 --> F8{"Resposta veio ruim ou desalinhada?"}
+        F8 -->|Não| F9["Responder e registrar memória"]
+        F8 -->|Sim| F10["Tentar resposta baseada em evidência do corpus ou das ferramentas"]
+        F10 --> F11{"Há evidência forte?"}
+        F11 -->|Sim| F9
+        F11 -->|Não| F12["Manter a melhor saída disponível sem script fixo"]
+
+        F3 -.-> F3R["Por quê?<br/>O sistema precisa saber se é pergunta, texto livre, memória ou novidade."]
+        F4 -.-> F4R["Por quê?<br/>A conversa atual deve se ligar ao histórico relevante."]
+        F5 -.-> F5R["Por quê?<br/>Hora, arquivos e web precisam entrar como fatos observados."]
+        F6 -.-> F6R["Por quê?<br/>O contexto precisa caber no tamanho máximo do modelo."]
+        F8 -.-> F8R["Por quê?<br/>O cérebro pequeno ainda pode gerar respostas quebradas."]
+        F10 -.-> F10R["Por quê?<br/>Quando há apoio forte, vale responder pelo que foi observado e não pelo improviso."]
+    end
+
+    subgraph S6["6. Observabilidade e Artefatos"]
+        G --> G1["Mostrar barras por etapa e por treino"]
+        G1 --> G2["Registrar medições de CPU, RAM, VRAM e progresso em memória"]
+        G2 --> G3["Persistir 11_monitoramento_execucao.json apenas em marcos úteis"]
+        G3 --> G4["Salvar artefatos JSON do pipeline em UTF-8 legível"]
+        G4 --> G5["Reaproveitar cérebro, memória e grafo em execuções futuras"]
+
+        G1 -.-> G1R["Por quê?<br/>Você precisa ver o andamento real sem depender de impressão linha a linha."]
+        G2 -.-> G2R["Por quê?<br/>O histórico fino continua existindo para análise posterior."]
+        G3 -.-> G3R["Por quê?<br/>Evita regravar o JSON a cada segundo e reduz ruído no disco."]
+        G4 -.-> G4R["Por quê?<br/>Os artefatos ajudam a comparar execuções e entender gargalos."]
+    end
+
+    B7 --> E1
+    B8 --> C1
+    C8 --> D7
+    D7 --> F5
+    C7 --> E1
+    E5 --> F1
+    E8 --> F1
+    F9 --> G1
+    F12 --> G1
