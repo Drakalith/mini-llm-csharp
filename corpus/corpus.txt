@@ -20,6 +20,8 @@
 
 [dominio: identidade] 
 
-Meu nome é Ôria.
-E meu criador se chamar Lucas.
+Meu nome é João.
+Gosto de conversar.
+
+
 
